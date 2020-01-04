@@ -11,37 +11,10 @@ import axios from 'axios';
 import './App.css';
 
 const App = () => {
-  const [users, setUsers] = useState([]);
-  const [user, setUser] = useState({});
+
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState(null);
-
-  //Search for GitHub users using GitHub API
-  const searchUsers = async (text) => {
-    setLoading(true);
-
-    const res = await axios.get(
-      `https://api.github.com/search/users?q=${text}&client_id=${process.env.GITHUB_CLIENT_ID}
-      &client_secret=${process.env.GITHUB_CLIENT_SECRET}`
-    );
-
-    setUsers(res.data.items);
-    setLoading(false);
-  };
-
-  //Get single GitHub user
-  const getUser = async (username) => {
-    setLoading(true);
-
-    const res = await axios.get(
-      `https://api.github.com/users/${username}?client_id=${process.env.GITHUB_CLIENT_ID}
-        &client_secret=${process.env.GITHUB_CLIENT_SECRET}`
-    );
-
-    setUser(res.data);
-    setLoading(false);
-  };
 
   //Get user's repo
   const getUserRepos = async (username) => {
@@ -53,12 +26,6 @@ const App = () => {
     );
 
     setRepos(res.data);
-    setLoading(false);
-  };
-
-  //Clear results
-  const clearUsers = () => {
-    setUsers([]);
     setLoading(false);
   };
 
@@ -82,12 +49,9 @@ const App = () => {
               render={(props) => (
                 <Fragment>
                   <Search
-                    searchUsers={searchUsers}
-                    clearUsers={clearUsers}
-                    showClear={users.length > 0 ? true : false}
                     setAlert={showAlert}
                   />
-                  <Users loading={loading} users={users} />
+                  <Users />
                 </Fragment>
               )}
             />
@@ -98,11 +62,8 @@ const App = () => {
               render={(props) => (
                 <User
                   {...props}
-                  getUser={getUser}
                   getUserRepos={getUserRepos}
-                  user={user}
                   repos={repos}
-                  loading={loading}
                 />
               )}
             />
