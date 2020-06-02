@@ -1,7 +1,7 @@
-<a href="https://www.javascript.com/"><h1 align="center"> 🔍GitHub Finder App </h1></a>
+<a href="https://elba-github-finder.netlify.com/"><h1 align="center"> 🔍GitHub Finder App </h1></a>
 
 <p align="center">
-<a href="https://elba-github-finder.netlify.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" title="JavaScript" alt="JavaScript logo" width="70px" height="70px"></a>
+<a href="https://www.javascript.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" title="JavaScript" alt="JavaScript logo" width="70px" height="70px"></a>
 &nbsp; &nbsp; &nbsp;<a href="https://github.com/facebook/react"><img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" title="React.js" alt="React.js logo" width="70px" height="70px"></a>
 &nbsp; &nbsp; &nbsp;<a href="https://www.netlify.com/"><img src="https://www.netlify.com/img/press/logos/full-logo-light.png" title="Netlify" alt="Netlify logo" width="240px" height="70px" style="padding-left: 40px"></a>
 &nbsp; &nbsp; &nbsp;<a href="https://www.udemy.com/"><img src="https://www.pipelinersales.com/wp-content/uploads/2019/06/large-udemy.jpg" title="Udemy" alt="Udemy logo" width="70px" height="70px" style="padding-left: 40px"></a>
